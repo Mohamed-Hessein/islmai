@@ -1,11 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islami/core/colors.dart';
-import 'package:islami/core/model/hadith_model.dart';
-import 'package:islami/core/styles.dart';
-import 'package:islami/core/suras_model.dart';
 
+import '../core/colors.dart';
+import '../core/model/hadith_model.dart';
+import '../core/styles.dart';
 class ReadingHadith extends StatefulWidget {
   ReadingHadith({super.key});
 

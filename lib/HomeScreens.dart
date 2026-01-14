@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:islami/core/colors.dart';
-import 'package:islami/homeScreens/hadith.dart';
-import 'package:islami/homeScreens/quran.dart';
-import 'package:islami/homeScreens/radio.dart';
-import 'package:islami/homeScreens/sebha.dart';
-import 'package:islami/homeScreens/time.dart';
+
+import 'core/colors.dart';
+import 'homeScreens/hadith.dart';
+import 'homeScreens/quran.dart';
+import 'homeScreens/radio.dart';
+import 'homeScreens/sebha.dart';
+import 'homeScreens/time.dart';
 class Homescreens extends StatefulWidget {
    Homescreens({super.key});
 
