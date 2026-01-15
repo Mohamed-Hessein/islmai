@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islamii/utils/images_path.dart';
 
 import '../core/colors.dart';
 import '../core/model/hadith_model.dart';
@@ -31,7 +32,7 @@ class _HadithState extends State<Hadith> {
     return Container(
 
         decoration: BoxDecoration(image: DecorationImage(
-            image: AssetImage('assets/images/hadith_background.png'),
+            image: AssetImage(ImagesPath.hadithBackground),
             fit: BoxFit.cover)),
         child: Scaffold(
             backgroundColor: Colors.transparent,
@@ -43,7 +44,7 @@ class _HadithState extends State<Hadith> {
                 children: [Align(
                     alignment: Alignment.topCenter,
                     child: Image.asset(
-                      'assets/images/header_logo.png', width: 300,
+                     ImagesPath.headerLogo, width: 300,
                       height: 130,)),
 
 
@@ -66,7 +67,7 @@ class _HadithState extends State<Hadith> {
                                 child: Stack(
                                     alignment: Alignment.topCenter,
                                     children: [
-                                      Image.asset('assets/images/Hadith Card.png',
+                                      Image.asset(ImagesPath.hadithCard,
                                         height: 618, width: 320, fit: BoxFit.fill
                                         ,),
                                       Padding(
