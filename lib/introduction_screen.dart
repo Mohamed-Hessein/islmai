@@ -1,7 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:islami/core/styles.dart';import 'package:islami/core/colors.dart';
+
+import 'core/colors.dart';
+import 'core/styles.dart';
 
 class IntroductionScreenS extends StatelessWidget {
    IntroductionScreenS({super.key});

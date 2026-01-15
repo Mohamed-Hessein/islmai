@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islami/core/colors.dart';
-import 'package:islami/core/styles.dart';
-import 'package:islami/core/suras_model.dart';
+
+import '../core/colors.dart';
+import '../core/styles.dart';
+import '../core/suras_model.dart';
 
 class ReadingSuea extends StatefulWidget {
    ReadingSuea({super.key});

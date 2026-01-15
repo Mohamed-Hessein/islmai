@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:islami/core/colors.dart';
+
+import '../core/colors.dart';
 
 class Radioo extends StatefulWidget {
    Radioo({super.key});

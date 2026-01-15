@@ -2,11 +2,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islami/core/colors.dart';
-import 'package:islami/core/styles.dart';
-import 'package:islami/screens/reading_hadith.dart';
 
+import '../core/colors.dart';
 import '../core/model/hadith_model.dart';
+import '../core/styles.dart';
+import '../screens/reading_hadith.dart';
 
 class Hadith extends StatefulWidget {
   const Hadith({super.key});
@@ -31,7 +31,7 @@ class _HadithState extends State<Hadith> {
     return Container(
 
         decoration: BoxDecoration(image: DecorationImage(
-            image: AssetImage('assets/images/Background (1).png'),
+            image: AssetImage('assets/images/hadith_background.png'),
             fit: BoxFit.cover)),
         child: Scaffold(
             backgroundColor: Colors.transparent,

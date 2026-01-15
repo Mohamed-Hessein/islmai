@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:islami/core/colors.dart';
-import 'package:islami/core/suras_model.dart';
 
+import '../core/colors.dart';
+import '../core/suras_model.dart';
 import '../screens/reading_suea.dart';
 import '../widgets/list_tile_suras.dart';
 

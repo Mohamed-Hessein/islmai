@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:islami/screens/reading_hadith.dart';
-import 'package:islami/screens/reading_suea.dart';
+import 'package:islamii/screens/reading_hadith.dart';
+import 'package:islamii/screens/reading_suea.dart';
 
 import 'HomeScreens.dart';
 import 'introduction_screen.dart';
