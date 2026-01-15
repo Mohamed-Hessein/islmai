@@ -1,0 +1,11 @@
+[33mcd97040[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdev[m[33m, [m[1;31morigin/feature/time[m[33m, [m[1;32mfeature/time[m[33m)[m HEAD@{0}: reset: moving to cd97040
+[33mcd97040[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdev[m[33m, [m[1;31morigin/feature/time[m[33m, [m[1;32mfeature/time[m[33m)[m HEAD@{1}: reset: moving to HEAD
+[33mcd97040[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdev[m[33m, [m[1;31morigin/feature/time[m[33m, [m[1;32mfeature/time[m[33m)[m HEAD@{2}: rebase (finish): returning to refs/heads/dev
+[33mcd97040[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdev[m[33m, [m[1;31morigin/feature/time[m[33m, [m[1;32mfeature/time[m[33m)[m HEAD@{3}: rebase (start): checkout HEAD
+[33mcd97040[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdev[m[33m, [m[1;31morigin/feature/time[m[33m, [m[1;32mfeature/time[m[33m)[m HEAD@{4}: rebase: checkout feature/time
+[33md138ac3[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m, [m[1;32mfeature/shared_per_and_some_edits[m[33m)[m HEAD@{5}: checkout: moving from feature/time to feature/shared_per_and_some_edits
+[33mcd97040[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdev[m[33m, [m[1;31morigin/feature/time[m[33m, [m[1;32mfeature/time[m[33m)[m HEAD@{6}: commit: time screen
+[33md138ac3[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m, [m[1;32mfeature/shared_per_and_some_edits[m[33m)[m HEAD@{7}: checkout: moving from dev to feature/time
+[33md138ac3[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m, [m[1;32mfeature/shared_per_and_some_edits[m[33m)[m HEAD@{8}: checkout: moving from main to dev
+[33md138ac3[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m, [m[1;32mfeature/shared_per_and_some_edits[m[33m)[m HEAD@{9}: commit: Add assets
+[33m3657692[m HEAD@{10}: commit (initial): init

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:islamii/utils/images_path.dart';
 
 import '../core/colors.dart';
 
@@ -25,7 +26,7 @@ bool isRectires  = false;
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             SizedBox(height: 20,),
-          Image.asset('assets/images/header_logo.png',width: 299,
+          Image.asset(ImagesPath.headerLogo,width: 299,
             height: 171,
 
           ),
@@ -62,7 +63,7 @@ bool isRectires  = false;
                     alignment: Alignment.center,
                     children: [  Align(
                       alignment: Alignment.bottomCenter,
-                      child: Image.asset('assets/images/radio_header_card.png',width: 400,
+                      child: Image.asset(ImagesPath.radioHeaderCard,width: 400,
                         height: 97,),
                     ),
 
@@ -92,7 +93,7 @@ bool isRectires  = false;
                   alignment: Alignment.center,
                   children: [  Align(
                     alignment: Alignment.bottomCenter,
-                    child: Image.asset('assets/images/radio_header_card.png',width: 400,
+                    child: Image.asset(ImagesPath.radioHeaderCard,width: 400,
                       height: 97,),
                   ),
 

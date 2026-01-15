@@ -2,6 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:islamii/utils/images_path.dart';
 
 class Sebha extends StatefulWidget {
    Sebha({super.key});
@@ -31,7 +32,7 @@ late double valueOfRoute = 50.0 ;
   }
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(image: DecorationImage(fit: BoxFit.cover,image: AssetImage('assets/images/sebha_background.png'))),
+      decoration: BoxDecoration(image: DecorationImage(fit: BoxFit.cover,image: AssetImage(ImagesPath.sebhaBackground))),
       child: Scaffold(
 
         backgroundColor: Colors.transparent,
@@ -43,7 +44,7 @@ late double valueOfRoute = 50.0 ;
             children: [Align(
               alignment: Alignment.topCenter,
               child: Image.asset(
-                'assets/images/header_logo.png', width: 300,
+               ImagesPath.headerLogo, width: 300,
                 height: 130,)),
             Text('سَبِّحِ اسْمَ رَبِّكَ الأعلى ', style: TextStyle(fontSize: 36,fontWeight: FontWeight.bold,color: Colors.white),)
 
@@ -57,7 +58,7 @@ late double valueOfRoute = 50.0 ;
                   child: Transform.rotate(angle: 0.0 + valueOfRoute,
                   alignment: Alignment.center,
                   transformHitTests: true,
-                  child:Image.asset('assets/images/Sebha_body.png') ,),
+                  child:Image.asset(ImagesPath.sebhaBody) ,),
                 ),
 
               InkWell(

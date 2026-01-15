@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:islamii/core/colors.dart';
 import 'package:islamii/core/styles.dart';
+import 'package:islamii/utils/images_path.dart';
 
 class Time extends StatefulWidget {
   const Time({super.key});
@@ -29,7 +30,7 @@ double salaBigTimeHeghit = 270;
   Widget build(BuildContext context) {
     return Container(
 
-      decoration: BoxDecoration(image: DecorationImage(fit: BoxFit.cover,image: AssetImage('assets/images/time_background.png'))),
+      decoration: BoxDecoration(image: DecorationImage(fit: BoxFit.cover,image: AssetImage(ImagesPath.timeBackground))),
       child: SafeArea(
 
         child: Scaffold(backgroundColor: Colors.transparent,
@@ -42,7 +43,7 @@ double salaBigTimeHeghit = 270;
                   crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
             SizedBox(height: 15,),
-              Image.asset('assets/images/header_logo.png',width: 299,
+              Image.asset(ImagesPath.headerLogo,width: 299,
                 height: 171,
             
               ),
@@ -55,7 +56,7 @@ double salaBigTimeHeghit = 270;
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
-                      Image.asset('assets/images/time_place.png',width: 400,height: 300,),
+                      Image.asset(ImagesPath.timePlace,width: 400,height: 300,),
             
             Align(
               alignment: Alignment.topCenter,
@@ -94,7 +95,7 @@ double salaBigTimeHeghit = 270;
                               child:                   Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [Text('ASR',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.white),),Text('04:38',style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold,color: Colors.white),),Text('PM',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.white),)],),
-                              height: 120,                           decoration: BoxDecoration(image: DecorationImage(image: AssetImage(  'assets/images/salah_time_border.png',)),),);}, itemCount: 5,),
+                              height: 120,                           decoration: BoxDecoration(image: DecorationImage(image: AssetImage( ImagesPath.salahTimeBorder,)),),);}, itemCount: 5,),
                             ),
                           ))
             
@@ -123,7 +124,7 @@ double salaBigTimeHeghit = 270;
                        padding: const EdgeInsets.only(bottom: 20.0,left:25 ),
                        child: Align(
                          alignment: Alignment.bottomLeft,
-                           child: ImageIcon(AssetImage('assets/images/sound_mute.png'),size:23 ,)),
+                           child: ImageIcon(AssetImage(ImagesPath.soundMute),size:23 ,)),
                      )
                    ],
                  ),
@@ -149,7 +150,7 @@ double salaBigTimeHeghit = 270;
                     height: 260,
                     child: Column(
                       children: [
-                        Image.asset('assets/images/helal_image.png',width: 140,height: 200,),
+                        Image.asset(ImagesPath.helalImage,width: 140,height: 200,),
                         Text('Evening Azkar',style: Styles.styleSmall!.copyWith(color: Colors.white),softWrap: true,overflow: TextOverflow.clip,)
                       ],
                     ),),
@@ -163,7 +164,7 @@ double salaBigTimeHeghit = 270;
                       height: 260,
                       child: Column(
                         children: [
-                          Image.asset('assets/images/helal_image.png',width: 140,height: 200,),
+                          Image.asset(ImagesPath.helalImage,width: 140,height: 200,),
 
                           Text('Evening Azkar',style: Styles.styleSmall!.copyWith(color: Colors.white),softWrap: true,overflow: TextOverflow.clip,)
                         ],

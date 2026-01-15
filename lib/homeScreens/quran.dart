@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:islamii/core/cach_helper.dart';
+import 'package:islamii/utils/images_path.dart';
 
 import '../core/colors.dart';
 import '../core/suras_model.dart';
@@ -397,17 +399,17 @@ TextEditingController controller = TextEditingController();
    }
 
   Widget build(BuildContext context) {
-
+List<int> mostView = CachHelper.getList('item');
     return Container(
 
-        decoration: BoxDecoration(image: DecorationImage(image: AssetImage('assets/images/quran_background.png'),fit: BoxFit.fill)),
+        decoration: BoxDecoration(image: DecorationImage(image: AssetImage(ImagesPath.quranBackground),fit: BoxFit.fill)),
         child: Scaffold(backgroundColor: Colors.transparent,
         body: Padding(
           padding: const EdgeInsets.only(top: 30.0,left: 16,right: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Image.asset('assets/images/header_logo.png',width: 299,
+            Image.asset(ImagesPath.headerLogo,width: 299,
               height: 171,
 
             ),
@@ -426,7 +428,7 @@ TextEditingController controller = TextEditingController();
                 contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 8),
           hintText: 'Sura Name',
           hintStyle: TextStyle(color:Colors.white,fontWeight: FontWeight.bold,fontSize: 16),
-          prefixIcon: ImageIcon(AssetImage('assets/images/ic_quran (1).png',),color: ColorsS.color,size: 28,),
+          prefixIcon: ImageIcon(AssetImage(ImagesPath.quranIcon,),color: ColorsS.color,size: 28,),
                 enabledBorder:       OutlineInputBorder(borderRadius: BorderRadius.circular(10),borderSide: BorderSide(color: Color(0xFFE2BE7F),))
               ,
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),borderSide: BorderSide(color: Color(0xFFE2BE7F),))
@@ -443,9 +445,9 @@ TextEditingController controller = TextEditingController();
             color: Colors.white,fontSize: 16,fontWeight: FontWeight.bold
           ),),
 SizedBox(height: 10,),
-          SizedBox(height: 150,
+        mostView.isNotEmpty ? SizedBox(height: 150,
           child:ListView.separated(separatorBuilder: (context, index){return SizedBox(width: 10,);},
-              scrollDirection: Axis.horizontal,itemCount: 10,
+              scrollDirection: Axis.horizontal,itemCount: mostView.length,
               itemBuilder: (context, index){
 
                 SurasModel surasModel = SurasModel(suraName: surahNamesArabic[index],suarnameen: surahNamesEnglish[index],versesCount: surahAyahCountAsString[index]);
@@ -453,12 +455,16 @@ SizedBox(height: 10,),
               decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color: ColorsS.color),child: Row(children: [Expanded(child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center
-                ,children: [Text(textAlign: TextAlign.start,'${suarsListMain[index].suarnameen}',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),Text('${suarsListMain[index].suraName}',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),Text('${suarsListMain[index].versesCount} verses',style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),),],)),Expanded(child: Image.asset('assets/images/img_most_recent.png'))],),);}),
+                ,children: [Text(textAlign: TextAlign.start,'${suarsListMain[mostView[index]].suarnameen}',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),Text('${suarsListMain[mostView[index]].suraName}',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),Text('${suarsListMain[mostView[index]].versesCount} verses',style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),),],)),Expanded(child: Image.asset('assets/images/img_most_recent.png'))],),);}),
 
-          )  ,
+          ) : SizedBox() ,
           Expanded(
             child: ListView.separated(itemBuilder: (context, index){
-            return InkWell(onTap: (){
+            return InkWell(onTap: ()async{
+           await   CachHelper.setList(index);
+           setState(() {
+
+           });
               Navigator.pushNamed(context, ReadingSuea.routeName,arguments:{
               'model':  SurasModel(suarnameen: filterdList[index].suarnameen,suraName: filterdList[index].suraName, versesCount: filterdList[index].versesCount),
                 'i': index+ 1
