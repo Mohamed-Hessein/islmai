@@ -15,7 +15,7 @@ class ImagesPath {
 
   static const String soundMute  = 'assets/images/sound_mute.png';
 
-  static const String sebhaBody  = 'assets/images/Sebha_body.png';
+  static const String sebhaBody  = 'assets/images/SebhaBody 1.png';
   static const String sebhaBackground  = 'assets/images/sebha_background.png';
 
   static const String sebha  = 'assets/images/sebha.png';

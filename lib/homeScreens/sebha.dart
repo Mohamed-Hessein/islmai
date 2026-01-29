@@ -49,17 +49,38 @@ late double valueOfRoute = 50.0 ;
             Text('سَبِّحِ اسْمَ رَبِّكَ الأعلى ', style: TextStyle(fontSize: 36,fontWeight: FontWeight.bold,color: Colors.white),)
 
           ,
+            SizedBox(height: 10,),
+
             Stack(
 
               alignment: Alignment.center,
               children: [
 
-                Center(
-                  child: Transform.rotate(angle: 0.0 + valueOfRoute,
-                  alignment: Alignment.center,
-                  transformHitTests: true,
-                  child:Image.asset(ImagesPath.sebhaBody) ,),
+
+            Column(
+              children: [
+                Positioned(
+                    top: -2,
+                    child: Image.asset('assets/images/sebha_head.png',height: 86,)),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Center(
+                        child: Transform.rotate(angle: 0.0 + valueOfRoute,
+                        alignment: Alignment.center,
+                        transformHitTests: true,
+                        child:Positioned(
+
+                          child: Column(
+                            children: [
+
+                              Center(child: Image.asset(ImagesPath.sebhaBody)),
+                            ],
+                          ),
+                        ) ,),
+                      ),
                 ),
+              ],
+            ),
 
               InkWell(
                 onTap: (){
